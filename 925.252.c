@@ -1,25 +1,29 @@
 #include <stdio.h>
 int main(void)
 {
-	int second, minute, hour;
+	//숫자n입력받음. 다음 공식이 성립하는 k의 최댓값. 2의 k승 <= n
 
-	printf("초를 입력하세요 : ");
-	scanf("%d", &second);
-	 
-	hour = second/3600;
-	second -= 3600*hour;
-	minute = second/60;
-	second -= 60*minute;
+	int n, k=0;
+	int i=2;
 
-	printf("h: %d, m: %d, s: %d\n", hour, minute, second);
+	printf("상수 n 입력: ");
+	scanf("%d", &n);
 
+/*	while(i<=n )
+	{
+		i *= 2;
+		k++;
+	}
+	*/
 
+	for(i=2; i<=n; i*=2)
+	{
+		k++;
+	}
 
+	printf("공식을 만족하는 k의 값: %d\n", k);
 
-	
 	return 0;
 	
-
-
 
 }
