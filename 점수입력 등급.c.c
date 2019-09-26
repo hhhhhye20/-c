@@ -4,6 +4,8 @@ int main(void)
     int score;
     
     scanf("%d", &score);
+	
+	// 90점보다 크거나 같고, 100점보다 작거나 같은 수 - &&연산자 필요..!!
     
     if(90 <= score && score <= 100)
 		printf("A\n");
