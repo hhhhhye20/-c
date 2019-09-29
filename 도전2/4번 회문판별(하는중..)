@@ -1,0 +1,30 @@
+#include <stdio.h>
+void Parilnd(char *ch)
+int main(void)
+{
+	char noun[10];
+	int i;
+	printf("문자열 입력: ");
+	scanf("%s", noun);
+
+	Parilnd(noun);
+
+
+	return 0;
+}
+
+void Parilnd(char ch)
+{
+	int i;
+	int count=0;
+
+	while(ch[count] = '\0')
+	{
+		count++;
+	}
+
+
+
+}
+
+		
