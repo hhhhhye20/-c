@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void str_Get(char* ptr, int num);
+int str_Int(char* ptr);
+int str_Sum(int ptr);
+
+int main(void)
+{
+	int count;
+	char str[100];
+	int arr;
+	int result=0;
+
+	scanf("%d", &count);
+
+	str_Get(str, count);
+	arr = str_Int(str);
+	
+	printf("%d", str_Sum(arr));
+
+	return 0;
+}
+
+void str_Get(char* ptr, int num)
+{
+	
+
+	while(getchar() != '\n');
+
+	fgets(ptr, num+1, stdin);
+
+	//arr = str_Int(ptr);
+
+}
+
+int str_Int(char* aptr)
+{
+	int result;
+
+	result = atoi(aptr);
+
+	return result;
+}
+
+
+int str_Sum(int ptr)
+{
+	int result=0;
+
+	while(ptr != 0)
+	{
+		result += ptr%10;
+		ptr /= 10;
+	}
+
+
+	return result;
+
+}
+
