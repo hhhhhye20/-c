@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main(void)
+{
+	char str[20];
+	char arr[20];
+	int i=0, length=0;
+	int k=0;
+	int sum=0;
+
+	fgets(str, sizeof(str), stdin);
+
+	for(i=0; str[i] != '0'; i++)
+	{
+		length++;
+	}
+
+
+	printf("%d\n", length);
+
+	for(i=0; i<length; i++)
+	{
+		if( 49 <= str[i] && str[i] <= 57 )
+		{
+			arr[k] = str[i];
+			k++;
+		}
+
+	}
+
+	printf("%c", arr[3]);
+
+
+	return 0;
+}
