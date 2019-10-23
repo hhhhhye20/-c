@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void)
+{
+	int u_choice;  //사용자 선택
+	int c_choice;  //컴퓨터 선택
+	char* str[3]={"바위","가위","보"};
+
+	int jud=0;  // 승.패.비 판단기준
+	int win=0, pair=0; // 승, 비김 카운트
+
+	srand(time(NULL));
+
+
+	while(1)
+	{
+		printf("바위는1, 가위는2, 보는3 :");
+		scanf("%d", &u_choice);
+
+		c_choice = (rand()%3)+1; 
+
+		jud = u_choice - c_choice;
+
+		printf("당신은 %s, 컴퓨터는 %s, ", str[u_choice - 1], str[c_choice - 1]);
+
+		if( jud == -1 || jud == 2)
+		{
+			printf("이겼습니다!\n");
+			win++;
+		}
+
+		else if(jud == 0 )
+		{
+			printf("비겼습니다!\n");
+			pair++;
+		}
+
+		else
+		{
+			printf("당신이 졌습니다!\n");
+			break;
+		}
+
+	}
+
+
+	printf("게임의 결과: %d승, %d무\n", win, pair);
+
+	return 0;
+
+
+}
